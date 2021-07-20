@@ -25,12 +25,7 @@ function productsToSwiperHtml(products) {
         var p = products[i];
         html += `
         <div class="swiper-slide">
-        <div class="product-image-wraper">
-        <div class="bg"></div>
-        <img class="product-image" src="${p.img}"/>
-    </div>
-                    <div class="product-name">${p.name}</div>
-                    
+                    <div class="product-name">${p.name}</div> ⚫
                 </div>
         `
     }
@@ -46,6 +41,22 @@ function update_swiper2(data) {
         return;
     }
     var products = data.products;
+    html = productsToSwiperHtml(products);
+    var swiper_settings = {
+        loop: true,
+        disableOnInteraction: true,
+        //direction: 'vertical',
+        speed:4000,//4000,
+        spaceBetween: 0,
+        slidesPerView: "2",
+        autoplay: {
+            delay:0,
+            reverseDirection:true,
+        }
+    };
+    document.querySelector('#swiper2_1').innerHTML = html;
+    var textSwiper = new Swiper('#swiper2_1', swiper_settings)
+    /*
     html1 = productsToSwiperHtml(products.slice(0, products.length/3));
     html2 = productsToSwiperHtml(products.slice(products.length/3, (products.length/3)*2 ));
     html3 = productsToSwiperHtml(products.slice((products.length/3)*2 ));
@@ -80,6 +91,7 @@ function update_swiper2(data) {
     tab3Swipers.push(new Swiper('#swiper2_1', swiper_settings2));
     tab3Swipers.push(new Swiper('#swiper2_2', swiper_settings));
     tab3Swipers.push(new Swiper('#swiper2_3', swiper_settings2));
+    */
 }
 
 function productsToImageSwiperHtml(products) {
@@ -105,11 +117,11 @@ function update_swiper(data){
         return;
     }
     var products = data.products;
-    html1 = productsToImageSwiperHtml(products.slice(0,products.length/2));
-    html2 = productsToImageSwiperHtml(products.slice(products.length/2,products.length));
+    html1 = productsToImageSwiperHtml(products);
+    //html2 = productsToImageSwiperHtml(products.slice(products.length/2,products.length));
     
     document.querySelector('#swiper1_1').innerHTML = html1;
-    document.querySelector('#swiper1_2').innerHTML = html2;
+    //document.querySelector('#swiper1_2').innerHTML = html2;
     
     var swiper_settings = {
         loop: true,
@@ -178,7 +190,7 @@ function tab3Init() {
 
 
 var last_tab_change_stemp;
-const TABS_TIMERS = [40000,50000,40000];//[0,0,50000];//
+const TABS_TIMERS = [0,0,50000];////[0,0,50000];//[40000,50000,40000];//[0,0,50000];////[0,0,50000];//
 const tabs = document.querySelectorAll('.tab');
 var current_tab_idx;
 function moveToTab(last, newTab) {
