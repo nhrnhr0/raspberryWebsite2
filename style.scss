@@ -1,0 +1,295 @@
+:root {
+    --fs-main: 3rem;
+    --fs-main-large: 6rem;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+@-webkit-keyframes shine {
+
+    0%,
+    10% {
+        background-position: -100px
+    }
+
+    20% {
+        background-position: top left
+    }
+
+    90% {
+        background-position: top right
+    }
+
+    100% {
+        background-position: 100px
+    }
+}
+
+@mixin gold-animation {
+    background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+    background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+    -webkit-background-size: 200px;
+    color: rgba(255, 255, 255, .3);
+    -webkit-background-clip: text;
+    -webkit-animation-name: shine;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    //text-shadow: 0 0 0 #cc9900ce;
+    text-shadow: 0 0 0 #ffbf0085;
+}
+
+/*@keyframes slidein {
+    0%{ 
+        transform: translate(100%, 0%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}*/
+body {
+    max-height: 100vh;
+    max-height: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.tab {
+    /*position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;*/
+    display: none;
+    background-color: beige;
+    overflow: hidden;
+    &.active {
+        display: flex;
+        z-index: 1;
+        //opacity: 1;
+        //visibility: visible;
+        //animation: slidein 2s ease-in-out 0s 1 forwards;
+    }
+
+    //display: none;
+    width: 100vw;
+    height: 100vh;
+
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    .logo {
+        max-height: 33vh;
+    }
+
+    .checklist {
+        @keyframes dash {
+            0% {
+                stroke-dashoffset: 340;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        font-size: var(--fs-main-large);
+        width: 100vw;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+
+        .bullet {
+
+            // checklist animation one after the other
+            &.animate {
+                &:nth-child(1) .wrapper svg .checkmark {
+                    animation: dash 1s ease-out 1s 1 forwards;
+                }
+
+                &:nth-child(2) .wrapper svg .checkmark {
+                    animation: dash 1s ease-out 2s 1 forwards;
+                }
+
+                &:nth-child(3) .wrapper svg .checkmark {
+                    animation: dash 1s ease-out 3s 1 forwards;
+                }
+
+                .wrapper svg .checkmark {
+
+
+
+                    display: block;
+                    fill: none;
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 360;
+                    opacity: 1;
+                }
+            }
+
+
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-content: center;
+
+            .wrapper {
+                padding-left: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+                max-width: 90px;
+                width: 90px;
+
+                svg {
+
+                    width: 100%;
+
+                    .checkmark {
+                        //display: none;
+                        position: absolute;
+                        //stroke: rgba(100, 58, 122, .5);
+                        stroke: rgba(0, 199, 27, 0.746);
+
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+.tab:nth-child(1) {
+    .logo {
+        max-height: 15vh;
+        flex: 1;
+    }
+    .swipers {
+        flex: 2;
+        .swiper-container {
+            max-width: 100vw;
+
+            .swiper-wrapper {
+                transition-timing-function: linear;
+
+                .swiper-slide {
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .img {   
+                        //background: #c7c7c7;
+                        background: radial-gradient(circle,white 0%,white 32%,#F5F5DC 84%);
+                        width: 250px;
+                    }
+
+                }
+            }
+        }
+        #swiper1_1 {
+            
+        }
+    }
+    .checklist {
+        flex: 1;
+    }
+}
+
+.tab:nth-child(2) {
+    background-color: black;
+
+    .video {
+        //padding: 40px;
+        width: 100vw;
+        height: 100vh;
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.tab:nth-child(3) {
+    background-color: black;
+
+    .logo {
+        max-height: 25vh;
+    }
+
+    .swipers {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-height: 33vh;
+        .swiper-container {
+            max-width: 100vw;
+
+            .swiper-wrapper {
+                transition-timing-function: linear;
+
+                .swiper-slide {
+                    font-size: var(--fs-main);
+                    text-align: right;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    .product-name {
+                        display: inline;
+                        color: white;
+                    }
+                    .product-image-wraper {
+                        position: relative;
+                        padding: 20px;
+                        .bg {
+                            background: radial-gradient(circle,white 0%,white 32%,black 65%);
+                        }
+                        
+                        .product-image {
+                            
+
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        #swiper2_1 {
+            height: 200%;
+            transform: translate(0, -50%);
+        }
+
+        #swiper2_2 {
+        }
+
+        #swiper2_3 {
+            height: 200%;
+            transform: translate(0, -50%);
+        }
+    }
+
+
+
+
+    .checklist {
+        @include gold-animation();
+    }
+}

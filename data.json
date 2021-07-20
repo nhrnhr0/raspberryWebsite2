@@ -1,0 +1,119 @@
+{   "vertion": "v0.1",
+    "products": [
+        {
+            "name":"חולצת טריקו שרוול קצר",
+            "makat":"676525004375",
+            "img": "./imgs/products/image_thumbnail_טריקו_ש.png"
+        },
+        {
+            "name":"חולצת טריקו שרוול ארוך",
+            "makat":"676525009592",
+            "img": "./imgs/products/image_thumbnail_טריקו_ארוך.png"
+        },
+        {
+            "name":"חולצת דרייפיט שרוול קצר",
+            "makat":"676525014305",
+            "img": "./imgs/products/image_thumbnail_דרייפט_קצר.png"
+        },
+        {
+            "name":"חולצת דרייפיט שרוול ארוך",
+            "makat":"676525017009",
+            "img": "./imgs/products/image_thumbnail_דרייפט_ארוך.png"
+        },
+        {
+            "name":"חולצת פולו דרייפיט שרוול קצר",
+            "makat":"676525017832",
+            "img": "./imgs/products/image_thumbnail_פולו_דרייפיט_קצר.png"
+        },
+        {
+            "name":"חולצת פולו שרוול קצר ",
+            "makat":"676525028081",
+            "img": "./imgs/products/image_thumbnail_פולו_קצר_XFLuc2R.png"
+        },
+
+
+        {
+            "name":"דגמ\"ח אינדיאני",
+            "makat":"676525031272",
+            "img":"./imgs/products/image_thumbnail_דגמח_אינדאני_IyWQaK6.png"
+        },
+        {
+            "name":"מכנס בנאים",
+            "makat":"676525040717",
+            "img":"./imgs/products/image_thumbnail_מכנס_לייקרה.png"
+        },
+        {
+            "name":"דגמ\"ח קצר",
+            "makat":"676525053151",
+            "img":"./imgs/products/image_thumbnail_דגמח_קצר.png"
+        },
+        {
+            "name":"מכנס ניילון",
+            "makat":"676525058965",
+            "img":"./imgs/products/image_thumbnail_מכנס_גומי.png"
+        },
+
+
+
+
+
+        {
+            "name":"כובע סהרה",
+            "makat":"676525071322",
+            "img":"./imgs/products/image_thumbnail_כובע_סהרה.png"
+        },
+        {
+            "name":"כובע לגיונר",
+            "makat":"676525078215",
+            "img":"./imgs/products/image_thumbnail_כובע_ליגיונר.png"
+        },
+        {
+            "name":"כובע מצחיה דרייפיט",
+            "makat":"676525088047",
+            "img":"./imgs/products/image_thumbnail_מצחייה_דרייפיט.png"
+        },
+        {
+            "name":"כובע מצחיה",
+            "makat":"676525090170",
+            "img":"./imgs/products/image_thumbnail_ïàüÆ_Äûçëä.png"
+        },
+        {
+            "name":"כובע רחב שוליים - בוקרים",
+            "makat":"676525094789",
+            "img":"./imgs/products/image_thumbnail_כובע_קאובוי.png"
+        },
+        {
+            "name":"גרבי כותנה",
+            "makat":"676525097827",
+            "img":"./imgs/products/image_thumbnail_גרבי_כותנה.png"
+        },
+
+
+
+        {
+            "name":"מגף ריינו חום 02",
+            "makat":"676525113701",
+            "img":"./imgs/products/image_thumbnail_מגף_ריינו_חום.png"
+        },
+        {
+            "name":"נעל ריינו בייסיק S3",
+            "makat":"676525113862",
+            "img":"./imgs/products/image_thumbnail_נעל_בייסיק_S3_XpZ1wXB.png"
+        },
+        {
+            "name":"מגף פנדה S3",
+            "makat":"676525116443",
+            "img":"./imgs/products/image_thumbnail_מגף_פנדה_tXbuUFO_dM6pS9C.png"
+        },
+        {
+            "name":"וסט זוהר",
+            "makat":"676525117969",
+            "img":"./imgs/products/image_thumbnail_ווסט_זוהר.png"
+        },
+        {
+            "name":"וסט מד\"א",
+            "makat":"676525135239",
+            "img":"./imgs/products/image_thumbnail_ווסט_מדא.png"
+        }
+    ]
+}
