@@ -178,7 +178,7 @@ function tab3Init() {
 
 
 var last_tab_change_stemp;
-const TABS_TIMERS = [5000,5000,5000]///[40000,50000,40000];//[0,0,50000];//
+const TABS_TIMERS = [40000,50000,40000];//[0,0,50000];//
 const tabs = document.querySelectorAll('.tab');
 var current_tab_idx;
 function moveToTab(last, newTab) {
@@ -221,4 +221,4 @@ function tabs_flow_update() {
     }
 }
 
-setInterval(tabs_flow_update, 20);
+setInterval(tabs_flow_update, 500);
